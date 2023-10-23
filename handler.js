@@ -1,6 +1,6 @@
 'use strict';
 const dbjs = require('./db.js');
-module.exports.hello = async event => {
+module.exports.getDefaultersList = async event => {
   const db = await dbjs.get();
   const dues =  db.collection('dues')
   const student = await dues.aggregate([
